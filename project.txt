@@ -1,0 +1,20 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Provide the path or URL of your dataset
+# For simplicity, we'll use a sample dataset from Seaborn
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
+data = pd.read_csv(url)
+
+# Display the first few rows of the dataset
+data.head()
+
+# Perform some basic data analysis and visualization
+# Example: Pairplot to visualize relationships between numerical variables
+sns.pairplot(data, hue='species')
+plt.show()
+
+# Example: Countplot to visualize the distribution of a categorical variable
+sns.countplot(x='species', data=data)
+plt.show()
